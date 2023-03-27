@@ -1,0 +1,24 @@
+<head>
+  <title>Gestor de Armazém</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Gestor de Armazém </h2>
+
+    <div class="dropdown">
+      <button class="dropbtn">Selecione</button>
+
+      <div class="dropdown-content">
+        <a routerLink="/criar-entrega">Criar Entrega</a>
+        <a routerLink="/criar-armazem">Criar Armazém</a>
+        <a routerLink="/listar-entrega">Listar Entregas</a>
+        <a routerLink="/listar-armazem">Listar Armazéns</a>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <button class="btn btn-block btn-danger mt-4" (click)="logout()">Sair</button>
+  </div>
+</body>
+
+<router-outlet></router-outlet>

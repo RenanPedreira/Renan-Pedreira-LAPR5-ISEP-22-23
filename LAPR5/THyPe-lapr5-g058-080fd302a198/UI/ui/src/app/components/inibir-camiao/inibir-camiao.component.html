@@ -1,0 +1,43 @@
+<body>
+    <div class="menu-bar">
+      <div class = "home-icon">
+        <a routerLink="/dashboard">Página Inicial</a>
+      </div> 
+  
+      <div class = "menu-item">
+        <a routerLink="/criar-camiao">Criar Camião</a>
+      </div>
+  
+      <div class = "menu-item">
+        <a routerLink="/listar-camiao">Listar Camiões</a>
+      </div>
+  
+      <div class = "menu-item">
+        <a routerLink="/inibir-camiao">Inibir Camião</a>
+      </div>
+
+      <div class = "menu-item">
+        <a routerLink="/desinibir-camiao">Desinibir Camião</a>
+      </div>
+    </div>
+  
+    <div class = "title-wrapper">
+      <h1 class = "title">Inibir camião</h1>
+      <h1 class = "subtitle">Selecione o camião</h1>
+    </div>
+  
+    <div class = "container">
+  
+        <div class="input-field select-field">  
+          <select [(ngModel)]="selectedCamiao" name="id">
+            <option *ngFor="let camiao of camioes" selected="id"> {{camiao.id}} </option>
+          </select>
+        </div>
+  
+        <div class = "button-submit">
+          <button type="button" class="add-button" (click)="inibirCamiao();">Inibir</button>      
+        </div>
+    </div>
+  </body>
+  
+  <router-outlet></router-outlet>

@@ -1,0 +1,66 @@
+<body>
+  <div class="menu-bar">
+    <div class = "home-icon">
+      <a routerLink="/dashboard">Página Inicial</a>
+    </div> 
+
+    <div class = "menu-item">
+      <a routerLink="/criar-armazem">Criar Armazém</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/listar-armazem">Listar Armazém</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/criar-entrega">Criar Entrega</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/listar-entrega">Listar Entrega</a>
+    </div>
+
+  </div>
+
+  <div class = "title-wrapper">
+    <h1 class = "title">Menu do Gestor de Armazéns</h1>
+  </div>
+
+  <div class="container">
+    <div class="filtro-wrapper">
+      <div class="filtro">
+        <label>ID do armazém: </label>
+        <select [(ngModel)]="selectedId" name="id">
+          <option *ngFor="let armazem of armazens" selected="id"> {{armazem.id}} </option>
+        </select>
+      </div>
+
+      <div class="filtro">
+        <label>Data de entrega: </label>
+        <input type="date" name="dataEntrega" placeholder="yyyy/mm/dd" #dataEntrega>
+        <span></span>
+      </div>
+
+      <div class = "button-submit">
+        <button type = "button" class="filter-button" (click)="filter(dataEntrega.value)">Filtrar</button>
+      </div>
+    
+      <select [(ngModel)]="parametro" placeholder="Ordenar por">
+          <option value="1">Data</option>
+          <option value="2">Massa</option>
+          <option value="3">Tempo Colocar</option>
+          <option value="4">Tempo Retirar</option>
+      </select>
+  </div>
+
+    <ul>
+      <div class="list" *ngFor="let entrega of entregasFiltered"> 
+          <div class="list-item"></div> 
+          <div class="list-item"><td>{{ labelData }} {{ entrega.dataEntrega }}</td></div>
+          <div class="list-item"><td>{{ labelMassa }} {{ entrega.massaEntrega }}</td> </div>
+          <div class="list-item"><td>{{ labelTempoColocar }} {{ entrega.tempoColocar }}</td></div>
+          <div class="list-item"><td>{{ labelTempoRetirar}} {{ entrega.tempoRetirar }}</td></div>   
+      </div>
+    </ul>
+  </div>
+</body>

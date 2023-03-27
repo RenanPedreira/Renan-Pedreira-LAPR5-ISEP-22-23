@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'PoppinS', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(0, 0, 0);
+  background-image: url("body-background.jpg");
+  background-size:cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.container {
+  position: relative;
+  width: 550px;
+  padding: 40px;
+  background: #f7f7f7;
+}
+
+.container h2 {
+  color: rgb(72, 71, 71);
+  font-size: 26px;
+  margin-bottom: 50px;
+}
+
+.input-field {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  font-size: 19px;
+  color: rgb(72, 71, 71);
+}
+
+.input-field input {
+  position: relative;
+  height: 25px;
+  background: #dedbdb;
+  border: line-width;
+  box-shadow: none;
+  font-size: 19px;
+  color: rgb(72, 71, 71);
+  width: 80%;
+}
+
+.select-field {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.input-field input[type = "date"] {
+  position: relative;
+  background: #dedbdb;
+  border: line-width;
+  box-shadow: none;
+  font-size: 19px;
+  color: rgb(72, 71, 71);
+  width: 80%;
+}
+
+.input-field input[type = "number"] {
+  position: relative;
+  background: #dedbdb;
+  border: line-width;
+  box-shadow: none;
+  font-size: 19px;
+  color: rgb(72, 71, 71);
+  width: 80%;
+}
+
+.input-field label {
+  position: relative;
+  top: -4px;
+  /*transition: 0.5s;*/
+}
+
+.button-submit {
+  margin-top: 15px;
+}
+
+.add-button {
+  margin-top: 5px;
+  border: none;
+  box-shadow: none;
+  padding: 10px 25px;
+  background: rgb(72, 71, 71);
+  color: rgb(212, 208, 208);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: rgb(126, 125, 125);
+}

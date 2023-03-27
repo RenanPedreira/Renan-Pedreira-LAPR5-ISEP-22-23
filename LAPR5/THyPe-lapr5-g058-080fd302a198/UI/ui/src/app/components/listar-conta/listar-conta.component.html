@@ -1,0 +1,40 @@
+<body>
+    <div class="menu-bar">
+      <div class = "home-icon">
+        <a routerLink="/dashboard">Página Inicial</a>
+      </div> 
+  
+      <div class = "menu-item">
+        <a routerLink="/criar-conta">Criar Conta</a>
+      </div>
+    </div>
+  
+    <div class = "title-wrapper">
+      <h1 class = "title">Listar Contas</h1>
+    </div>
+  
+    <div class="container">    
+      <div *ngFor="let conta of contas">
+          <div class = "list-item">
+            <label>Nome: </label> <td>{{ conta.nome }}</td>
+          </div>
+          <div class = "list-item">
+           <label>Email: </label> <td>{{ conta.email }}</td>
+          </div>
+          <div class = "list-item">
+            <label>Telefone: </label> <td>{{ conta.telefone }}</td>
+          </div>
+          <div class = "list-item">
+            <label>Password: </label> <td> ********* </td>
+          </div>
+          <div class = "list-item">
+            <label>Role: </label> <td>{{ conta.role }} </td>
+          </div>
+          <div class = "list-item">
+            <hr>
+          </div> 
+      </div>
+  </div>
+</body>
+  
+<router-outlet></router-outlet>

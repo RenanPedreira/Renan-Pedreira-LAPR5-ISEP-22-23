@@ -1,0 +1,72 @@
+<head>
+  <title>Criar Armazém</title>
+</head>
+
+<!-- <div>
+  <label for="id">id: </label>
+  <input id="id" #id />
+</div> -->
+
+<body>
+  <div class="container">
+    <h2>Introduza os dados necessários</h2>
+
+    <form>
+      <div class="input-field">
+        <label for="municipio">Município: </label>
+        <input id="municipio" #municipio />
+      </div>
+
+      <div class="input-field">
+        <label for="lojaId">Loja ID: </label>
+        <input id="lojaId" #lojaId />
+      </div>
+
+      <div class="input-field">
+        <label for="longitude">Longitude: </label>
+        <input type="number" name="longitude" #longitude />
+      </div>
+
+      <div class="input-field">
+        <label for="latitude">Latitude: </label>
+        <input type="number" name="latitude" #latitude />
+      </div>
+
+      <div class="input-field">
+        <label for="cidadeNo">Cidade No: </label>
+        <input type="number" name="cidadeNo" #cidadeNo />
+      </div>
+
+      <div class="input-field">
+        <label for="designacao">Designação: </label>
+        <input id="designacao" #designacao />
+      </div>
+
+      <div class = "input-field">
+        <label for="endereco">Endereço: </label>
+        <input id="endereco" #endereco />
+      </div>
+
+      <div class = "input-field">
+        <label for="altitude">Altitude: </label>
+        <input type="number" name="altitude" #altitude />
+      </div>
+
+      <div class = "button-submit">
+        <button type="button" class="add-button" (click)="add(longitude.value, 
+                                                        latitude.value,
+                                                        endereco.value, 
+                                                        designacao.value,
+                                                        municipio.value,
+                                                        lojaId.value,
+                                                        cidadeNo.value,
+                                                        altitude.value);
+                                                        lojaId.value=''">
+          Adicionar Armazém
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+
+<app-messages></app-messages>

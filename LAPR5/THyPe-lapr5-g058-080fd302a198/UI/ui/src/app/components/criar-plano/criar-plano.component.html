@@ -1,0 +1,73 @@
+<body>
+  <div class="menu-bar">
+    <div class = "home-icon">
+      <a routerLink="/dashboard">Página Inicial</a>
+    </div> 
+
+    <div class = "menu-item">
+      <a routerLink="/criar-rota">Criar Rota</a>
+    </div>
+
+    <div class = "menu-item">
+    <a routerLink="/criar-empacotamento">Criar Empacotamento</a>
+    </div>
+    
+    <div class = "menu-item">
+      <a routerLink="/criar-plano">Criar Plano</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/criar-plano-algoritmo-genetico">Criar Plano Algoritmo Genético</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/listar-caminho">Listar Rotas</a>
+    </div>
+  
+    <div class = "menu-item">
+      <a routerLink="/listar-empacotamento">Listar Empacotamentos</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/listar-plano">Listar Planos</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/update-empacotamento">Atualizar Empacotamento</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/visualizacao-rede">Visualização da rede viária</a>
+    </div>
+  </div>
+
+  <div class = "title-wrapper">
+    <h1 class = "title">Calcular Plano</h1>
+    <h1 class = "subtitle">Introduza os dados:</h1>
+  </div>
+
+  <div class = "container">
+
+      <div class = "input-field">
+        <input type="date" #data placeholder="Data"/>
+        <span></span>
+      </div>
+
+      <div class = "input-field">
+        <select id="heuristica" #heuristica aria-placeholder="Seleciona a heurística">
+            <option value="1">Cálculo completo</option>
+            <option value="2">Cálculo baseado em distância</option>
+            <option value="3">Cálculo baseado em peso descarregável</option>
+            <option value="4">Cálculo baseado em distância e peso descarregável</option>
+            <option value="5">Cálculo baseado em algorítimo genético</option>
+            <option value="6">Cálculo baseado em algorítimo genérico</option>
+        </select>
+      </div>
+
+      <div class = "button-submit">
+        <button type="button" class="add-button" (click)="add(data.value,heuristica.value);">Calcular Rota</button>      
+      </div>
+  </div>
+</body>
+
+<router-outlet></router-outlet>

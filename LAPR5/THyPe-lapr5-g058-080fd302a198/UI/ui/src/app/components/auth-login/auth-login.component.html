@@ -1,0 +1,36 @@
+<body>
+    <div class="container">
+        <form class="from-signin" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+            <h2>Login</h2>
+            <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username or passwords</div>
+            <br>
+            <label>Email address</label>
+            <input type="email" id="email" name="email" ngModel class="form-control" placeholder="Email" required
+                autofocus>
+            <br>
+            <label>Password</label>
+
+            <div class="input-field2">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+                <i class="fas fa-eye eye-icon" (click)="showPassword = !showPassword" [class.fa-eye-slash]="showPassword" style="cursor: pointer;"></i>
+                <input type="password" id="password" name="password" ngModel class="form-control" [type]="showPassword ? 'text' : 'password'" #password placeholder="Password">
+            </div>
+            
+            <br>
+            <!--  <button class="btn btn-lg btn-primary btn-block" type="submit" disabled>Login</button> -->
+            <input type="submit" name="login" class="inputButton" id="login" value=" Login " disabled />
+            <input type="checkbox" id="checkbox"
+                onchange="document.getElementById('login').disabled = !this.checked;" />
+            <label for="checkbox"> Eu li e concordo com os <a
+                    href="https://joanavaz1335-terms.mynotice.io/#header-1-agreement-to-terms">termos de uso</a>.
+            </label>
+        </form>
+
+        <div>
+            <h2>Login With Google</h2>
+            <div id="buttonDiv"></div>
+        </div>
+
+    </div>
+</body>

@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'PoppinS', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    min-height: 100vh;
+    background: rgb(238, 234, 234);
+    background-size:auto;
+    background-position: bottom;
+    background-attachment: fixed;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 100px;
+    background: rgb(249, 249, 249);
+  }
+  
+  .container h2 {
+    color: rgb(72, 71, 71);
+    font-size: 30px;
+    margin-bottom: 50px;
+  }
+
+  .inibir label {
+    position: relative;
+    top: 19px; 
+    font-size: 24px;
+    display: inline-block;
+    color: rgb(95, 94, 94);
+    width: 140px; 
+  }
+  
+  .inibir select {
+    position: relative;
+    top: 20px; 
+    display: inline-block;
+    width: 290px;
+    height: 25px;
+    font-size: 19px;
+    color: rgb(80, 80, 80);
+  }
+
+  .add-button {
+    top: 20px; 
+    height: 30px;
+    display: inline-block;
+    width: 100px;
+    position: relative;
+    margin-left: 30px;
+    border: none;
+    box-shadow: none;
+    padding: 1px 25px;
+    background: #8f8e8e;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }

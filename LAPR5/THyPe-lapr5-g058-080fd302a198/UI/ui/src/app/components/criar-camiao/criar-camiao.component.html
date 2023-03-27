@@ -1,0 +1,67 @@
+<body>
+  <div class="menu-bar">
+    <div class = "home-icon">
+      <a routerLink="/dashboard">Página Inicial</a>
+    </div> 
+
+    <div class = "menu-item">
+      <a routerLink="/criar-camiao">Criar Camião</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/listar-camiao">Listar Camiões</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/inibir-camiao">Inibir Camião</a>
+    </div>  
+
+    <div class = "menu-item">
+      <a routerLink="/desinibir-camiao">Desinibir Camião</a>
+    </div>
+  </div>
+
+  <div class = "title-wrapper">
+    <h1 class = "title">Criar Camião</h1>
+    <h1 class = "subtitle">Introduza os dados:</h1>
+  </div>
+
+  <div class = "container">
+    <div class = "input-field"> 
+      <input id="matricula" #matricula placeholder="Matrícula do Camião" />
+      <span></span>
+    </div>
+
+    <div class = "input-field">
+      <input type="number" #tara placeholder="Tara"/>
+      <span></span>
+    </div>
+
+    <div class = "input-field">
+      <input type="number" name="cargaKg" #cargaKg placeholder="Carga em Kg"/>
+      <span></span>
+    </div>
+
+    <div class = "input-field">
+      <input type="number" name="cargaKWh" #cargaKWh placeholder="Carga em KWh"/>
+      <span></span>
+    </div>
+
+    <div class = "input-field">
+      <input type="number" name="autonomia" #autonomia placeholder="Autonomia"/>      
+      <span></span>
+    </div>
+
+    <div class = "input-field">
+      <input type="number" name="carregamento" #carregamento placeholder="Tempo de Carregamento Rápido"/>
+      <span></span>
+    </div>
+    
+    <div class = "button-submit">
+      <button type="button" class="add-button" (click)="add(matricula.value, tara.value, cargaKg.value, cargaKWh.value, autonomia.value, 
+      carregamento.value); matricula.value=''">Adicionar Camião</button>
+    </div>
+  </div>
+</body>
+
+<router-outlet></router-outlet>

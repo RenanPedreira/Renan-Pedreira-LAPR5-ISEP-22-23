@@ -1,0 +1,357 @@
+camiao('BL-00-DD', 9000, 7000, 100, 100, 60).
+camiao('SH-33-DD', 9000, 7000, 100, 100, 60).
+
+armazem("Armazem101", "Arouca", "Arouca", "101", "Arouca", 40.9, 8.2, 101).
+armazem("Armazem102", "Espinho", "Espinho", "102", "Espinho", 41.0, 8.6, 102).
+armazem("Armazem103", "Gondomar", "Gondomar", "103", "Gondomar", 42.1, 8.7, 103).
+armazem("Armazem104", "Maia", "Maia", "104", "Maia", 41.2, 8.6, 104).
+armazem("Armazem5", "Matosinhos", "Matosinhos", "5", "Matosinhos", 41.1, 8.6, 5).
+armazem("Armazem106", "Azeméis", "Azeméis", "106", "Azeméis", 40.8, 8.4, 106).
+armazem("Armazem107", "Paredes", "Paredes", "107", "Paredes", 41.2, 8.3, 107).
+armazem("Armazem108", "Porto", "Porto", "108", "Porto", 41.1, 8.7, 108).
+armazem("Armazem109", "Póvoa", "Póvoa", "109", "Póvoa", 41.3, 8.7, 109).
+armazem("Armazem110", "Maria", "Maria", "110", "Maria", 40.9, 8.5, 110).
+armazem("Armazem111", "Tirso", "Tirso", "111", "Tirso", 41.3, 8.4, 111).
+
+%Armazem 5
+rota(64,5,101,141,51,24).
+rota(25,5,102,55,20,0).
+rota(18,5,103,48,14,0).
+rota(11,5,104,25,0,0).
+rota(55,5,106,97,44,0).
+rota(35,5,107,55,28,0).
+rota(9,5,108,29,7,0).
+rota(30,5,109,48,24,0).
+rota(37,5,110,69,30,0).
+rota(32,5,111,53,26,0).
+
+%Armazem 1
+rota(53,101,102,122,42,0).
+rota(57,101,103,122,46,0).
+rota(67,101,104,151,54,25).
+rota(65,101,5,147,52,25).
+rota(30,101,106,74,24,0).
+rota(44,101,107,116,35,0).
+rota(57,101,108,141,46,0).
+rota(92,101,109,185,74,53).
+rota(37,101,110,97,30,0).
+rota(80,101,111,164,64,40).
+
+%Armazem 2
+rota(52,102,101,116,42,0).
+rota(28,102,103,55,22,0).
+rota(31,102,104,74,25,0).
+rota(27,102,5,65,22,0).
+rota(34,102,106,69,27,0).
+rota(48,102,107,74,38,0).
+rota(22,102,108,61,18,0).
+rota(55,102,109,103,44,0).
+rota(17,102,110,36,14,0).
+rota(51,102,111,88,41,0).
+
+%Armazem 3
+rota(56,103,101,120,45,0).
+rota(28,103,102,50,22,0).
+rota(19,103,104,46,15,0).
+rota(18,103,5,46,14,0).
+rota(46,103,106,74,37,0).
+rota(29,103,107,63,23,0).
+rota(10,103,108,38,8,0).
+rota(45,103,109,84,36,0).
+rota(35,103,110,59,28,0).
+rota(24,103,111,61,27,0).
+
+%Armazem 4
+rota(68,104,101,149,54,25).
+rota(30,104,102,65,24,0).
+rota(20,104,103,46,16,0).
+rota(12,104,5,27,10,0).
+rota(59,104,106,103,47,0).
+rota(34,104,107,55,27,0).
+rota(12,104,108,36,10,0).
+rota(32,104,109,50,26,0).
+rota(43,104,110,78,34,0).
+rota(24,104,111,42,19,0).
+
+%Armazem 6
+rota(29,106,101,69,23,0).
+rota(34,106,102,71,27,0).
+rota(47,106,103,74,38,0).
+rota(58,106,104,103,46,0).
+rota(55,106,5,99,44,0).
+rota(60,106,107,88,48,0).
+rota(48,106,108,92,38,0).
+rota(83,106,109,134,66,45).
+rota(18,106,110,42,14,0).
+rota(70,106,111,116,56,30).
+
+%Armazem 7
+rota(45,107,101,69,23,0).
+rota(48,107,102,71,27,0).
+rota(47,107,103,74,38,0).
+rota(58,107,104,103,46,0).
+rota(55,107,5,99,44,0).
+rota(60,107,106,88,48,0).
+rota(48,107,108,92,38,0).
+rota(83,107,109,134,66,45).
+rota(18,107,110,42,14,0).
+rota(70,107,111,116,56,30).
+
+
+
+%RotaCurta
+entrega("8001", 101, 20231225, 20.0, 30, 30).
+entrega("8002", 102, 20231225, 21.0, 31, 31).
+entrega("8003", 103, 20231225, 22.0, 32, 32).
+entrega("8004", 104, 20231225, 23.0, 33, 33).
+entrega("8006", 106, 20231225, 24.0, 34, 34).
+
+%RotaExtendida
+entrega("9001", 101, 20231224, 20.0, 30, 30).
+entrega("9002", 102, 20231224, 21.0, 31, 31).
+entrega("9003", 103, 20231224, 22.0, 32, 32).
+entrega("9004", 104, 20231224, 23.0, 33, 33).
+entrega("9006", 106, 20231224, 24.0, 34, 34).
+entrega("9007", 107, 20231224, 25.0, 35, 35).
+entrega("9008", 108, 20231224, 21.0, 31, 31).
+entrega("9009", 109, 20231224, 22.0, 32, 32).
+entrega("9010", 110, 20231224, 23.0, 33, 33).
+entrega("9011", 111, 20231224, 24.0, 34, 34).
+
+%RotaCurta
+empacotamento("8001", 'BL-00-DD', 0, 0, 0).
+empacotamento("8002", 'BL-00-DD', 1, 0, 0).
+empacotamento("8003", 'BL-00-DD', 2, 0, 0).
+empacotamento("8004", 'BL-00-DD', 3, 0, 1).
+empacotamento("8006", 'BL-00-DD', 0, 1, 0).
+
+%RotaExtendida
+empacotamento("9001", 'BL-00-DD', 0, 0, 0).
+empacotamento("9002", 'BL-00-DD', 1, 0, 0).
+empacotamento("9003", 'BL-00-DD', 2, 0, 0).
+empacotamento("9004", 'BL-00-DD', 3, 0, 1).
+empacotamento("9006", 'BL-00-DD', 0, 1, 0).
+empacotamento("9007", 'BL-00-DD', 0, 2, 1).
+empacotamento("9008", 'BL-00-DD', 0, 3, 1).
+empacotamento("9009", 'BL-00-DD', 1, 1, 0).
+empacotamento("9010", 'BL-00-DD', 2, 2, 0).
+empacotamento("9011", 'BL-00-DD', 3, 3, 0).
+
+
+
+
+tara(T):-camiao('BL-00-DD',T,_,_,_,_).
+tcarregamento(T):-camiao('BL-00-DD',_,_,_,_,T).
+autonomiamax(A):-camiao('BL-00-DD',_,_,_,A,_).
+cargainicial(C):-camiao('BL-00-DD',_,_,C,_,_).
+cargamax(C):-camiao('BL-00-DD',_,C,_,_,_).
+
+%Soma_pesos_da_Entrega
+soma_pesos([],[],0).
+soma_pesos([Cidade|LC],[PesoAc|LP],PesoAc):-
+    soma_pesos(LC,LP,PesoAc1),entrega(_,Cidade,_,Peso,_,_),PesoAc is Peso+PesoAc1.
+
+%Acrescenta_a_tara_do_camiao
+acrescenta_tara(Tara,[],[Tara]).
+acrescenta_tara(Tara,[Peso|LP],[PesoTara|LPT]):-
+    acrescenta_tara(Tara,LP,LPT),
+    PesoTara is Peso+Tara.
+
+%Calcula_o_custo_da_viagem_sem_paragens
+calcula_custo_viagem(LC,Custo):-
+    soma_pesos(LC,LP,_),
+    tara(Tara),
+    cargamax(Carga),
+    acrescenta_tara(Tara,LP,LPT),
+     append([5|LC],[5],LCcompleto),
+    custo(LCcompleto,LPT,Custo,Tara,Carga).
+
+custo([_],[],0,_,_).
+custo([C1,C2|LCcompleto],[PT|LPT],Custo,Tara,Carga):-
+    custo([C2|LCcompleto],LPT,Custo1,Tara,Carga),
+    (rota(_,C1,C2,T,_,_);rota(_,C2,C1,T,_,_)),
+    Custo is Custo1+T*(PT/(Tara+Carga)). %, Autonomia is Autonomia1 + R * (PT/(Tara+Carga)).
+
+%calcula_custo_das_paragens
+calcula_custo_paragem(LE,Tempo):-
+                                  cargainicial(Autonomia),
+                                  soma_pesos(LE,LP,_),
+                                  tara(Tara),
+                                  acrescenta_tara(Tara,LP,LPT),
+                                  append([5|LE],[5],LEcompleto),
+                                  custo_paragem(LEcompleto,Autonomia,Tempo,LPT).
+
+custo_paragem([_],_,0,[]).
+custo_paragem([Cidade1,Cidade2|LE],Autonomia,Tempo,[MassaCamiao|LPT]):-
+   ((Cidade1 == 5  ,
+   calculaEnergiaParaProximaCidade(Cidade1,Cidade2,MassaCamiao,Energia),
+   Autonomia1 is Autonomia - Energia ,
+   custo_paragem([Cidade2|LE],
+   Autonomia1,Tempo,LPT) ));
+   (rota(_,Cidade1,Cidade2,_,_,TempoExtra),
+   calculaEnergiaParaProximaCidade(Cidade1,Cidade2,MassaCamiao,Energia),
+   entrega(_,Cidade1,_,_,_,TempoRetirar),
+   TempoExtra1 is TempoExtra,
+   TempoExtra2 is TempoRetirar,cargainicial(CM)),
+   ((TempoExtra\=0,!,True = 0 );(True=1)), Autonomia1 is Autonomia - Energia  ,
+   ( Cidade2\=5  ,((Autonomia1< (CM*0.2), !,
+   tcarregamento20_80(Autonomia,Tcarregar),
+   ((True==0,EnergiaDoTrosso  is (CM * 0.2));
+   EnergiaDoTrosso  is (CM * 0.8) -Autonomia) ,
+   ((Tcarregar>TempoExtra2, Tfinal1 is TempoExtra1 + Tcarregar );
+   Tfinal1 is TempoExtra2+TempoExtra1));((Tfinal1 is TempoExtra2),
+   ((True==0,EnergiaDoTrosso  is (CM * 0.2));EnergiaDoTrosso is Autonomia1)));
+   ((Autonomia1<(CM*0.2), !, tcarregamentoFinal(Autonomia,Energia,Tcarregar),
+   ((True==0,EnergiaDoTrosso is (CM * 0.2));EnergiaDoTrosso  is (CM * 0.8) -Autonomia),
+   ((Tcarregar>TempoExtra2, Tfinal1 is TempoExtra1 + Tcarregar );
+   Tfinal1 is TempoExtra2+TempoExtra1));((Tfinal1 is TempoExtra2),
+   ((True==0,EnergiaDoTrosso  is (CM * 0.2));EnergiaDoTrosso is Autonomia1)))),
+   custo_paragem([Cidade2|LE],EnergiaDoTrosso,Tempo1,LPT),
+   Tempo is Tempo1 + Tfinal1.
+
+tcarregamento20_80(Autonomia,Tcarga):- buscarCarregamentoMaxTempo(Carga,Tempo),
+                                       Tcarga is ((Carga*0.8) - Autonomia) * (Tempo/48).
+
+tcarregamentoFinal(Autonomia1,Autonomia2,Tcarga):-
+	buscarCarregamentoMaxTempo(Carga,Tempo),
+    ((Autonomia2>Autonomia1,
+    Tcarga is ((Carga*0.2) - (Autonomia2 - Autonomia1)) * (Tempo/48));
+    (Tcarga is ((Carga*0.2) - (Autonomia1 - Autonomia2)*(Tempo/48)))).
+
+buscarCarregamentoMaxTempo(Carga,Tempo):-cargainicial(Carga) , tcarregamento(Tempo).
+
+calculaEnergiaParaProximaCidade(C1,C2,M,E):- tara(Tara), cargamax(Carga),
+                                             (rota(_,C1,C2,_,A1,_);
+                                             rota(_,C2,C1,_,A1,_)),
+                                             E is (A1*(M/(Tara+Carga))).
+
+calculoTotal(LE,TF):- calcula_custo_paragem(LE,Tempo), calcula_custo_viagem(LE,Tempo1), TF is Tempo + Tempo1 .
+
+solucao_otima(Caminhos, CaminhoOtimo):- retractall(otimo(_,_)),
+                                        asserta(otimo([], 9000)),
+                                        caminho_otimo(Caminhos),
+                                        otimo(CaminhoOtimo,_).
+
+caminho_otimo([]):-!.
+caminho_otimo([CaminhoAtual|Caminhos]):- calculoTotal(CaminhoAtual, CustoAtual),
+                                         otimo(CaminhoOtimo, CustoMenor),
+                                         (CustoAtual<CustoMenor,
+                                         retractall(otimo(CaminhoOtimo,_)),
+                                         asserta(otimo(CaminhoAtual, CustoAtual)),
+                                         caminho_otimo(Caminhos));
+                                         caminho_otimo(Caminhos).
+
+caminhos(Armazens, Caminhos):- findall(Caminho,(permutation(Armazens,Caminho)),Caminhos).
+
+test(List, R):-caminhos(List,C), solucao_otima(C,R).
+
+
+
+
+
+%Distancia:
+
+%Adiciona_origem_e_destino_ao_plano_calculado
+heuDist([Armazem|Armazens], CaminhoFinal):- buildPathDist(Armazem, Armazens, Caminho),
+                                            append([5|Caminho], [5], CaminhoFinal).
+
+%Calcula_o_plano_baseado_na_distancia_entre_armazens
+buildPathDist(_,[],[]):-!.
+buildPathDist(Armazem, Armazens, [ArmazemProximo|Caminho]):-  retractall(armazemProximo(_,_)),
+                                                              asserta(armazemProximo(5,9000)),
+                                                              findClosestDist(Armazem, Armazens),
+                                                              armazemProximo(ArmazemProximo,_),
+                                                              delete(Armazens, ArmazemProximo, ArmazensRestantes),
+                                                              buildPathDist(ArmazemProximo, ArmazensRestantes, Caminho).
+
+%Encontra_o_armazem_mais_proximo
+findClosestDist(_,[]):-!.
+findClosestDist(Armazem, [Current|Armazens]):- rota(Dist,Armazem,Current,_,_,_),
+                                               armazemProximo(ArmazemProximo,DistAtual),
+                                               (Dist<DistAtual,
+                                                 retractall(armazemProximo(ArmazemProximo,_)),
+                                                 asserta(armazemProximo(Current, Dist)),
+									     findClosestDist(Armazem, Armazens));
+                                               findClosestDist(Armazem, Armazens).
+
+
+
+%Peso
+%Adiciona_origem_e_destino_ao_plano_calculado
+heuristicaMassa([Armazem|Armazens], Data, CaminhoFinal):- calculaMassa(Armazem, Armazens, Data, Caminho),
+                                                          append([5|Caminho], [5], CaminhoFinal).
+
+%Calcula_o_plano_baseado_no_peso_da_entrega
+calculaMassa(_A,[],_D,[]):-!.
+calculaMassa(Armazem, Armazens, Data, [ArmazemProximo|Caminho]):- retractall(armazemProximo(_,_)),
+                                                                 asserta(armazemProximo(5,0)),
+                                                                 calculaMaiorMassa(Armazem, Data, Armazens),
+                                                                 armazemProximo(ArmazemProximo,_),
+                                                                 delete(Armazens, ArmazemProximo, ArmazensRestantes),
+                                                                 calculaMassa(ArmazemProximo, ArmazensRestantes, Data, Caminho).
+
+%Encontra_o_proximo_armazem
+calculaMaiorMassa(_A,_D, []):-!.
+calculaMaiorMassa(Armazem, Data, [Current|Armazens]):- entrega(_, Current, Data, Massa, _, _),
+                                                       armazemProximo(ArmazemProximo, MassaAtual),
+                                                      (Massa>=MassaAtual,
+                                                       retractall(armazemProximo(ArmazemProximo,_)),
+                                                       asserta(armazemProximo(Current, Massa)),
+                                                       calculaMaiorMassa(Armazem, Data, Armazens));
+                                                      calculaMaiorMassa(Armazem, Data, Armazens).
+
+
+
+%Distancia_e_Peso
+heuDistPeso([Armazem|Armazens],Data, CaminhoFinal):- buildPathDistPeso(Armazem, Armazens,Data, Caminho),
+                                                     append([5|Caminho], [5], CaminhoFinal).
+
+%Calcula_o_plano_baseado_no_peso_e_distancia
+buildPathDistPeso(_A,[],_D,[]):-!.
+buildPathDistPeso(Armazem, Armazens, Data, [ArmazemProximo|Caminho]):-
+                                                          retractall(armazemProximo(_,_)),
+                                                          asserta(armazemProximo(5,0)),
+                                                          findClosestDistPeso(Armazem,Data,Armazens),
+                                                          armazemProximo(ArmazemProximo,_),
+                                                          delete(Armazens, ArmazemProximo, ArmazensRestantes),
+                                                          buildPathDistPeso(ArmazemProximo, ArmazensRestantes,Data, Caminho).
+
+%Encontra_o_proximo_armazem
+findClosestDistPeso(_A,_D,[]):-!.
+findClosestDistPeso(Armazem, Data, [Current|Armazens]):- rota(Dist,Armazem,Current,_,_,_),
+                                                         entrega(_, Current, Data, Massa, _, _),
+                                                         Custo is Massa/Dist,
+                                                         armazemProximo(ArmazemProximo,CustoAtual),
+                                                         (Custo>=CustoAtual,
+                                                           retractall(armazemProximo(ArmazemProximo,_)),
+                                                           asserta(armazemProximo(Current, Custo)),
+                                                           findClosestDistPeso(Armazem,Data, Armazens));
+                                                         findClosestDistPeso(Armazem,Data, Armazens).
+
+
+
+listaSeqTimed(List,R,Tsol):- get_time(Ti),listaSeq(List,R),get_time(Tf), Tsol is Tf-Ti.
+listaSeq(List, R):-caminhos(List,C), solucao_otima(C,R).
+
+seq(List, Data, Heuristica, Tsol):- get_time(Ti),
+                                     plano(List, Heuristica, Data,_),
+                                     get_time(Tf),
+                                     Tsol is Tf-Ti.
+
+
+
+
+%Calcula_plano_a_partir_de_uma_heuristica_ou_calculo_compelto
+plano(Armazens, Heuristica, Data, Result):-
+    (Heuristica is 2,
+     %Heuristica_Distancia
+     heuDist([5|Armazens], Result);
+    (Heuristica is 3,
+     %Heuristica_Massa
+     heuristicaMassa([5|Armazens], Data, Result));
+    (Heuristica is 4,
+     %Heuristica_Distancia_Peso
+     heuDistPeso([5|Armazens], Data, Result);
+     %Calculo_completo
+     caminhos(Armazens, CaminhosPossiveis),
+     solucao_otima(CaminhosPossiveis, Result))).

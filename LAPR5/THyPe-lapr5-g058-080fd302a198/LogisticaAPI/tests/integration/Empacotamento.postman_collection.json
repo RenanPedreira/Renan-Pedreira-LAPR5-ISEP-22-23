@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "e6f98572-dfd6-469a-be1c-bb6fef0e6809",
+		"name": "Empacotamento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23425355"
+	},
+	"item": [
+		{
+			"name": "Empacotamento POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Teste de sucesso\r",
+							"pm.test(\"Pedido POST com sucesso\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+							"});\r",
+							"\r",
+							"//Testar atributos\r",
+							"pm.test(\"Testar id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(\"220909/1\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar matrícula\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.camiao).to.eql(\"AA-10-AA\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar posição X\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.posicaoX).to.eql(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar posição Y\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.posicaoY).to.eql(0);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar posição Z\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.posicaoZ).to.eql(0);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"220909/1\",\r\n    \"camiao\": \"AA-10-AA\",\r\n    \"posicaoX\": 0,\r\n    \"posicaoY\": 0,\r\n    \"posicaoZ\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/empacotamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"empacotamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empacotamento PUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Teste de sucesso\r",
+							"pm.test(\"Pedido POST com sucesso\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+							"});\r",
+							"\r",
+							"//Testar atributos\r",
+							"pm.test(\"Testar id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(\"220909/1\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar matrícula\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.camiao).to.eql(\"AA-10-AA\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar posição X\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.posicaoX).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar posição Y\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.posicaoY).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar posição Z\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.posicaoZ).to.eql(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"220909/1\",\r\n    \"camiao\": \"AA-10-AA\",\r\n    \"posicaoX\": 1,\r\n    \"posicaoY\": 1,\r\n    \"posicaoZ\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/empacotamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"empacotamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empacotamento GET",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/empacotamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"empacotamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empacotamento GET ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Teste de sucesso\r",
+							"pm.test(\"Pedido POST com sucesso\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+							"});\r",
+							"\r",
+							"//Testar atributos\r",
+							"pm.test(\"Testar id\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].id).to.eql(\"220909/1\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar matrícula\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].camiao).to.eql(\"AA-10-AA\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar posição X\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].posicaoX).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar posição Y\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].posicaoY).to.eql(1);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar posição Z\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].posicaoZ).to.eql(1);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"220909/1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/empacotamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"empacotamento"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "e13f44451c1c521f7c6ad594",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "mongoadmin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

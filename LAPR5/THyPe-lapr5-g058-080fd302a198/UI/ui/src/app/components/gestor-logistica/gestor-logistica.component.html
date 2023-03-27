@@ -1,0 +1,54 @@
+<body>
+  <div class="menu-bar">
+    <div class = "home-icon">
+      <a routerLink="/dashboard">Página Inicial</a>
+    </div> 
+
+    <div class = "menu-item">
+      <a routerLink="/criar-rota">Criar Rota</a>
+    </div>
+
+    <div class = "menu-item">
+    <a routerLink="/criar-empacotamento">Criar Empacotamento</a>
+    </div>
+    
+    <div class = "menu-item">
+      <a routerLink="/criar-plano">Criar Plano</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/criar-plano-algoritmo-genetico">Criar Plano Algoritmo Genético</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/listar-caminho">Listar Rotas</a>
+    </div>
+  
+    <div class = "menu-item">
+      <a routerLink="/listar-empacotamento">Listar Empacotamentos</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/listar-plano">Listar Planos</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/update-empacotamento">Atualizar Empacotamento</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/visualizacao-rede">Visualização da rede viária</a>
+    </div>
+
+    <div class="menu-item">
+      <button class="btn btn-block btn-danger mt-4" (click)="logout()">Sair</button>
+    </div>
+  </div>
+
+  <div class = "title-wrapper">
+    <h1 class = "title">Menu do Gestor de Logística</h1>
+    <h1 class = "subtitle">Selecione uma opção</h1>
+  </div>
+</body>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "aa6d57ea-468a-4af6-8e41-11f6ff282742",
+		"name": "Camiao",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23425355"
+	},
+	"item": [
+		{
+			"name": "Camião POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Teste de sucesso\r",
+							"pm.test(\"Pedido POST com sucesso\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+							"});\r",
+							"\r",
+							"//Testar atributos\r",
+							"pm.test(\"Testar matrícula\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(\"AA-10-AA\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar tara\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tara).to.eql(7000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar cargaKg\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.cargaKg).to.eql(4000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar cargaKWh\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.cargaKWh).to.eql(100);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar autonomia\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.autonomia).to.eql(100);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar tempoCarregamentoRapido\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tempoCarregamentoRapido).to.eql(60);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"AA-10-AA\",\r\n    \"tara\": 7000,\r\n    \"cargaKg\": 4000,\r\n    \"cargaKWh\": 100,\r\n    \"autonomia\": 100,\r\n    \"tempoCarregamentoRapido\": 60\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/camiao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"camiao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Camião PUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Teste de sucesso\r",
+							"pm.test(\"Pedido POST com sucesso\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+							"});\r",
+							"\r",
+							"//Testar atributos\r",
+							"pm.test(\"Testar matrícula\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.id).to.eql(\"AA-10-AA\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar tara\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tara).to.eql(7500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar cargaKg\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.cargaKg).to.eql(4500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar cargaKWh\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.cargaKWh).to.eql(150);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar autonomia\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.autonomia).to.eql(150);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar tempoCarregamentoRapido\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.tempoCarregamentoRapido).to.eql(60);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"AA-10-AA\",\r\n    \"tara\": 7500,\r\n    \"cargaKg\": 4500,\r\n    \"cargaKWh\": 150,\r\n    \"autonomia\": 150,\r\n    \"tempoCarregamentoRapido\": 60\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/camiao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"camiao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Camião GET",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/camiao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"camiao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Camião GET ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Teste de sucesso\r",
+							"pm.test(\"Pedido POST com sucesso\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);\r",
+							"});\r",
+							"\r",
+							"//Testar atributos\r",
+							"pm.test(\"Testar matrícula\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].id).to.eql(\"AA-10-AA\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar tara\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].tara).to.eql(7500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar cargaKg\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].cargaKg).to.eql(4500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar cargaKWh\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].cargaKWh).to.eql(150);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar autonomia\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].autonomia).to.eql(150);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Testar tempoCarregamentoRapido\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].tempoCarregamentoRapido).to.eql(60);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"AA-10-AA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/camiao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"camiao"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,59 @@
+<head>
+  <title>Criar Entrega</title>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Introduza os dados necessários</h2>
+
+    <form>
+
+      <div class="input-field select-field">
+        <label for="id">Id do armazém: </label>
+        <select [(ngModel)]="selectedId" name="id">
+          <option *ngFor="let armazem of armazens" selected="id">{{armazem.id}} </option>
+        </select>
+      </div>
+
+      <!-- <div class = "input-field"> 
+        <label for="armazemId">Id do armazém de entrega: </label>
+        <input id="armazemId" #armazemId />
+        <span></span>
+      </div> -->
+
+      <div class="input-field">
+        <label for="dataEntrega">Data de entrega: </label>
+        <input type="date" name="dataEntrega" placeholder="yyyy/mm/dd" #dataEntrega>
+        <span></span>
+      </div>
+
+      <div class="input-field">
+        <label for="massaEntrega">Massa da entrega: </label>
+        <input type="number" name="massaEntrega" #massaEntrega />
+        <span></span>
+      </div>
+
+      <div class="input-field">
+        <label for="tempoColocar">Tempo de colocar entrega: </label>
+        <input type="number" name="tempoColocar" #tempoColocar />
+        <span></span>
+      </div>
+
+      <div class="input-field">
+        <label for="tempoRetirar">Tempo de retirar entrega: </label>
+        <input type="number" name="tempoRetirar" #tempoRetirar />
+        <span></span>
+      </div>
+
+      <div class="button-submit">
+        <button type="button" class="add-button" (click)="add(dataEntrega.value, 
+                                                        massaEntrega.value, 
+                                                        tempoColocar.value, 
+                                                        tempoRetirar.value)">
+          Adicionar Entrega
+        </button>
+      </div>
+      <app-messages></app-messages>
+    </form>
+  </div>
+</body>

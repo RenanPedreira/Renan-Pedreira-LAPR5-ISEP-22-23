@@ -1,0 +1,81 @@
+<body>
+  <div class="menu-bar">
+    <div class="home-icon">
+      <a routerLink="/dashboard">Página Inicial</a>
+    </div>
+
+    <div class="menu-item">
+      <a routerLink="/criar-conta">Criar Conta</a>
+    </div>
+
+    <div class="menu-item">
+      <a routerLink="/listar-conta">Listar Contas</a>
+    </div>
+
+  </div>
+
+  <div class="title-wrapper">
+    <h1 class="title">Criar Conta</h1>
+    <h1 class="subtitle">Introduza os dados:</h1>
+  </div>
+
+  <div class="container">
+    <div class="input-field">
+      <input id="string" #nome placeholder="Nome de Utilizador" />
+      <span></span>
+    </div>
+
+    <div class="input-field">
+      <input type="string" #email placeholder="Email" />
+      <span></span>
+    </div>
+
+    <div class="input-field">
+      <input type="number" #telefone placeholder="Telefone" />
+      <span></span>
+    </div>
+
+    <!-- <div class="input-field">
+      <input type="password" #password placeholder="Password" />
+      <span></span>
+    </div> -->
+    
+    <div class="input-field2">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+      <i class="fas fa-eye eye-icon" (click)="showPassword = !showPassword" [class.fa-eye-slash]="showPassword" style="cursor: pointer;"></i>
+      <input type="password" [type]="showPassword ? 'text' : 'password'" #password placeholder="Password">
+      <span></span>
+    </div> 
+
+<!-- 
+    <div class="input-field">
+      <input type="string" #role placeholder="Tipo de Utilizador" />
+      <span></span>
+    </div>
+ --> 
+    <label id="label-id">Selecione o tipo de Utilizador:</label>
+
+    <div class="input-field">
+      <select>
+        <option value="Administrador" selected>Administrador</option>
+        <option value="Gestor de Armazém">Gestor de Armazém</option>
+        <option value="Gestor de Frota">Gestor de Frota</option>
+        <option value="Gestor de Logística">Gestor de Logística</option>
+      </select>
+    </div>
+
+    <div class="button-submit">
+      <button type="submit" name="login" class="inputButton" id="login" value=" Login " disabled
+        (click)="add( nome.value,email.value, telefone.value, password.value)">Adicionar Conta</button>
+
+      <input type="checkbox" id="checkbox" onchange="document.getElementById('login').disabled = !this.checked;" />
+      <label for="checkbox"> Eu li e concordo com os <a
+          href="https://joanavaz1335-terms.mynotice.io/#header-1-agreement-to-terms">termos de uso</a>.
+      </label>
+    </div>
+
+  </div>
+</body>
+
+<router-outlet></router-outlet>

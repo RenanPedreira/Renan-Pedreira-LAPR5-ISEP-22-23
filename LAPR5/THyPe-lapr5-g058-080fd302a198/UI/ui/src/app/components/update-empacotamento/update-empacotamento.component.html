@@ -1,0 +1,82 @@
+<body>
+
+  <div class="menu-bar">
+    <div class = "home-icon">
+      <a routerLink="/dashboard">Página Inicial</a>
+    </div> 
+
+    <div class = "menu-item">
+      <a routerLink="/criar-rota">Criar Rota</a>
+    </div>
+
+    <div class = "menu-item">
+    <a routerLink="/criar-empacotamento">Criar Empacotamento</a>
+    </div>
+    
+    <div class = "menu-item">
+      <a routerLink="/criar-plano">Criar Plano</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/criar-plano-algoritmo-genetico">Criar Plano Algoritmo Genético</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/listar-caminho">Listar Rotas</a>
+    </div>
+  
+    <div class = "menu-item">
+      <a routerLink="/listar-empacotamento">Listar Empacotamentos</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/listar-plano">Listar Planos</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/update-empacotamento">Atualizar Empacotamento</a>
+    </div>
+
+    <div class = "menu-item">
+      <a routerLink="/visualizacao-rede">Visualização da rede viária</a>
+    </div>
+  </div>
+  
+    <div class = "title-wrapper">
+      <h1 class = "title">Atualizar Empacotamento</h1>
+      <h1 class = "subtitle">Introduza os dados:</h1>
+    </div>
+  
+    <div class = "container">
+        <div class = "input-field"> 
+            <input type="string" #entrega placeholder="Entrega">
+            <span></span>
+        </div>
+
+        <div class = "input-field">
+            <input type="string" #camiao placeholder="Camião">
+            <span></span>
+        </div>
+
+        <div class = "input-field">
+            <input type="number" #posicaoX placeholder="Posição X">
+            <span></span>
+        </div>
+
+        <div class = "input-field">
+            <input type="number" #posicaoY placeholder="Posição Y">
+            <span></span>
+        </div>
+
+        <div class = "input-field">
+            <input type="number" #posicaoZ placeholder="Posição Z">
+            <span></span>
+        </div>
+
+        <div class = "button-submit">
+            <button type = "button" class = "add-button" (click) = "update(entrega.value, camiao.value, posicaoX.value, posicaoY.value, posicaoZ.value)"> Atualizar empacotamento</button>
+        </div>
+    </div>
+</body>
+  
+  <router-outlet></router-outlet>

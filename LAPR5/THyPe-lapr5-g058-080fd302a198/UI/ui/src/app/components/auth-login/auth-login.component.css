@@ -1,0 +1,263 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(0, 0, 0);
+  font-family: Arial, sans-serif;
+  background-image: url("body-background.jpg");
+  background-size:cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.container {
+  background: #f7f7f7;
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.form-signin { 
+  margin: 20px 0;
+  background: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: larger;
+}
+
+.inputButton {
+  padding: 10px 20px;
+  margin: 15px 2px;
+  text-align: center;
+  text-decoration: none;
+  font-size: larger;
+  cursor: pointer;
+}
+
+#checkbox {
+  padding: 10px 20px;
+  height: 18px;
+  width: 36px; 
+  font-size: larger;
+  align-items: center; 
+}
+
+#buttonDiv {
+  text-align: left;
+}
+
+h2 {
+  font-size: 30px;
+  color: rgb(57, 57, 57);
+}
+
+label {
+  line-height: 2; 
+  color: rgb(57, 57, 57);
+  font-size: 20px; 
+}
+
+.input-field2 {
+  position: relative;
+  height: 55px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input-field2 .fa-eye {
+  position: absolute;
+  right: 0;
+  right: 30px;  /* move the element 20 pixels to the left */
+  font-size: 24px; 
+  cursor: pointer;
+}
+
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'PoppinS', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(0, 0, 0);
+  background-image: url("body-background.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  padding-top: 40px;
+  padding-left: 50px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  background: #151515;
+}
+
+.container h2 {
+  color: #999;
+  margin-bottom: 70px;
+}
+
+.dropbtn {
+  align-self: center;
+  background-color: rgb(126, 125, 125);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width: 400px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.input-field {
+  position: relative;
+  height: 55px;
+  width: 100%;
+}
+
+.input-field input[type="number"] {
+  position: absolute;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+  color: rgb(10, 38, 91);
+  width: 100%;
+  transform: translateY(30px);
+}
+
+.input-field input {
+  position: absolute;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  font-size: 16px;
+  color: rgb(10, 38, 91);
+  width: 100%;
+  transform: translateY(30px);
+}
+
+.input-field label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(54, 80, 129);
+  pointer-events: none;
+  display: block;
+
+  transform: translateY(30px);
+}
+
+.input-field input:focus+label {
+  visibility: hidden;
+}
+
+.input-field span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  background: rgb(10, 38, 91);
+  width: 100%;
+  height: 1px;
+}
+
+.input-field span:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #b7b7b7;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+}
+
+.input-field input:focus~span:before,
+.input-field input:valid~span:before {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 400px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.btn {
+  align-self: center;
+  background-color: rgb(126, 125, 125);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width: 400px;
+  cursor: pointer;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: rgb(77, 77, 77);
+}
+
+.sr-only {
+
+  align-self: center;
+
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  width: 400px;
+} */

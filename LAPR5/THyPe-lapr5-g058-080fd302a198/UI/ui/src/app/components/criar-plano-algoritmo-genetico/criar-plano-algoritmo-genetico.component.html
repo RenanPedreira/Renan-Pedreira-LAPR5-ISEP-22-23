@@ -1,0 +1,91 @@
+<body>
+    <div class="menu-bar">
+        <div class = "home-icon">
+          <a routerLink="/dashboard">Página Inicial</a>
+        </div> 
+    
+        <div class = "menu-item">
+          <a routerLink="/criar-rota">Criar Rota</a>
+        </div>
+    
+        <div class = "menu-item">
+        <a routerLink="/criar-empacotamento">Criar Empacotamento</a>
+        </div>
+        
+        <div class = "menu-item">
+          <a routerLink="/criar-plano">Criar Plano</a>
+        </div>
+    
+        <div class = "menu-item">
+          <a routerLink="/criar-plano-algoritmo-genetico">Criar Plano Algoritmo Genético</a>
+        </div>
+    
+        <div class = "menu-item">
+          <a routerLink="/listar-caminho">Listar Rotas</a>
+        </div>
+      
+        <div class = "menu-item">
+          <a routerLink="/listar-empacotamento">Listar Empacotamentos</a>
+        </div>
+    
+        <div class = "menu-item">
+          <a routerLink="/listar-plano">Listar Planos</a>
+        </div>
+    
+        <div class = "menu-item">
+          <a routerLink="/update-empacotamento">Atualizar Empacotamento</a>
+        </div>
+
+        <div class = "menu-item">
+          <a routerLink="/visualizacao-rede">Visualização da rede viária</a>
+        </div>
+      </div>
+  
+    <div class = "title-wrapper">
+      <h1 class = "title">Calcular Plano com Algoritmo Genético</h1>
+      <h1 class = "subtitle">Introduza os dados:</h1>
+    </div>
+  
+    <div class = "container">
+        <div class = "input-field">
+          <input type="date" #data placeholder="Data"/>
+          <span></span>
+        </div>
+  
+        <div class = "input-field"> 
+          <input id="limite" #limite placeholder="Limite"/>
+          <span></span>
+        </div>
+  
+        <div class = "input-field"> 
+          <input id="tempo" #tempo placeholder="Tempo Limite de Cálculo"/>
+          <span></span>
+        </div>
+  
+        <div class = "input-field"> 
+          <input id="geracoes" #geracoes placeholder = "Nº de Geracoes"/>
+          <span></span>
+        </div>
+  
+        <div class = "input-field"> 
+          <input id="populacao" #populacao placeholder = "População"/>
+          <span></span>
+        </div>
+  
+        <div class = "input-field"> 
+          <input id="probCruzamento" #probCruzamento placeholder = "Probabilidade de Cruzamento"/>
+          <span></span>
+        </div>
+          
+        <div class = "input-field"> 
+          <input id="probMutacao" #probMutacao placeholder = "Probabilidade de Mutação"/>
+          <span></span>
+        </div>
+          
+        <div class = "button-submit">
+          <button type="button" class="add-button" (click)="add(data.value, limite.value, tempo.value, geracoes.value, populacao.value, probCruzamento.value, probMutacao.value);">Calcular Plano</button>      
+        </div>
+    </div>
+  </body>
+
+  <router-outlet></router-outlet>

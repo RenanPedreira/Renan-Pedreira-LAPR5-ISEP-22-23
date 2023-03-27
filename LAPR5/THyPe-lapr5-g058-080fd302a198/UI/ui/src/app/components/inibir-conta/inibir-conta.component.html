@@ -1,0 +1,46 @@
+<body>
+    <div class="container">
+      <h2>Lista de Utilizadores</h2>
+  
+      <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource">
+  
+          <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef>Nome</th>
+            <td mat-cell *matCellDef="let user"> {{user.nome}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="telefone">
+            <th mat-header-cell *matHeaderCellDef>Telefone</th>
+            <td mat-cell *matCellDef="let user"> {{user.telefone}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="role">
+            <th mat-header-cell *matHeaderCellDef>Role</th>
+            <td mat-cell *matCellDef="let user"> {{user.role}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>Email</th>
+            <td mat-cell *matCellDef="let user"> {{user.email}} </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+  
+        <mat-paginator #paginator [pageSizeOptions]="[5, 10, 15]" aria-label="Select page" showFirstLastButtons>
+        </mat-paginator>
+      </div>
+  
+      <br>
+      <div class="inibir">
+        <label for="id">Inibir conta: </label>
+        <select [(ngModel)]="selectedEmail" name="id">
+          <option *ngFor="let user of users" [value]="user.email">{{user.email}} </option>
+        </select>
+        <button type="button" class="add-button" (click)="inibirConta();">Inibir</button>      
+      </div> 
+  
+    </div>
+  </body>

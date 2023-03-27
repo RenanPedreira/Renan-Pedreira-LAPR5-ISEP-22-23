@@ -1,0 +1,28 @@
+<head>
+  <title>Selecione um Utilizador</title>
+</head>
+
+<body>
+  <div class = "container">
+    <h2>Selecione um Utilizador</h2>
+
+
+    <div class="dropdown">
+      <button class="dropbtn">Utilizador</button>
+
+      <div class = "dropdown-content">
+        <a routerLink="/administrador">Administrador</a>
+        <a routerLink="/gestor-armazem">Gestor de Armazém</a>
+        <a routerLink="/gestor-frota">Gestor de Frota</a>
+        <a routerLink="/gestor-logistica">Gestor de Logística</a>
+      </div>   
+    </div>
+    <p>&nbsp;</p>
+    <button class="btn btn-block btn-danger mt-4" (click)="logout()">Sair</button>
+  </div>
+</body>
+
+
+
+
+<router-outlet></router-outlet>
